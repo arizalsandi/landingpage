@@ -20,7 +20,7 @@ pipeline {
         agent { label "agent1" }
             steps {
               //
-                script { echo "Deploy" }
+                script { echo "Deploy2" }
             }
           }
         }
