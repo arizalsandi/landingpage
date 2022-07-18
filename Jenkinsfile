@@ -10,12 +10,12 @@ pipeline {
                 if (env.BRANCH_NAME == "development")
                 
                 { 
-                sh "docker build -t arizalsandi/landingpage:dev-$BUILD_NUMBER . "
-                sh "docker push arizalsandi/landingpage:dev-$BUILD_NUMBER"
+                sh "docker build -t arizalsandi/landingpage:dev-$(git rev-parse --short HEAD) . "
+                sh "docker push arizalsandi/landingpage:dev-$(git rev-parse --short HEAD)"
 
                 }else{ 
-                sh "docker build -t arizalsandi/landingpage:master-$BUILD_NUMBER . "
-                sh "docker push arizalsandi/landingpage:master-$BUILD_NUMBER"
+                sh "docker build -t arizalsandi/landingpage:master-$(git rev-parse --short HEAD) . "
+                sh "docker push arizalsandi/landingpage:master-$(git rev-parse --short HEAD)"
                 
                 }
                 
