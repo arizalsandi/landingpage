@@ -4,19 +4,19 @@ stages {
 stage('Build') {
 steps {
   //
-  script ( echo "Build" )
+  script { echo "Build" }
 }
 }
 stage('Test') {
 steps {
 //
-  script ( echo "Test" )
+  script { echo "Test" }
 }
 }
 stage('Deploy') {
 steps {
 //
-  script ( echo "Deploy" )
+  script { echo "Deploy" }
 }
 }
 }
