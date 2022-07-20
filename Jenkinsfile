@@ -35,7 +35,7 @@ pipeline {
         agent { label "agent1" }
             steps {
               //
-                script { echo "Testing Deploy" }
+                script { echo "Testing Deploy Lagi" }
             }
           }
         }
