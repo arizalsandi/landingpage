@@ -29,8 +29,8 @@ pipeline {
             steps {
               //
                 script { echo "Test" 
-                def scannerHome = tool 'sonarqube' ;
-                withSonarQubeEnv('sonarqube') {
+                def scannerHome = tool 'sonarqube1' ; //sonarqube by Global Tools Configuration
+                withSonarQubeEnv('sonarqube') {  //sonarqube by Endpoint Server Sonarqube
                 sh "${scannerHome}/bin/sonar-scanner"}
                 } 
               }
