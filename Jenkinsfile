@@ -28,10 +28,10 @@ pipeline {
         agent { label "agent1" }
             steps {
               //
-                script { echo "Test" }
+                script { echo "Test" 
                 def scannerHome = tool 'SonarScanner' ;
                 withSonarQubeEnv('sonarqube') {
-                sh "${scannerHome}/bin/sonar-scanner"
+                sh "${scannerHome}/bin/sonar-scanner"}
                 } 
               }
             }
