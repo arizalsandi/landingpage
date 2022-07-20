@@ -40,7 +40,7 @@ pipeline {
             steps {
               //
                 script { echo "Testing Deploy Again" 
-                sh "kubectl set image deployment/landingpage landingpage=arizalsandi/landingpage:$BUILD_NUMBER -n app-landingpage"
+                sh "kubectl set image deployment/landingpage landingpage=arizalsandi/landingpage:dev-$BUILD_NUMBER -n app-landingpage"
                 }
             }
           }
