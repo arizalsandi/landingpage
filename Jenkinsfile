@@ -41,6 +41,7 @@ pipeline {
               //
                 script { echo "Testing Deploy Again" 
                 sh "kubectl set image deployment/landingpage landingpage=arizalsandi/landingpage:dev-$BUILD_NUMBER -n app-landingpage"
+                sh "docker image rmi arizalsandi/landingpage:dev-$BUILD_NUMBER"
                 }
             }
           }
