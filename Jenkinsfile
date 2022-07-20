@@ -39,7 +39,9 @@ pipeline {
         agent { label "agent1" }
             steps {
               //
-                script { echo "Testing Deploy Again" }
+                script { echo "Testing Deploy Again" 
+                sh "kubectl set image deployment/landingpage landingpage=arizalsandi/landingpage:$BUILD_NUMBER -n app-landingpage"
+                }
             }
           }
         }
