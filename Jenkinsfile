@@ -29,7 +29,7 @@ pipeline {
             steps {
               //
                 script { echo "Test" 
-                def scannerHome = tool 'SonarScanner' ;
+                def scannerHome = tool 'sonarqube' ;
                 withSonarQubeEnv('sonarqube') {
                 sh "${scannerHome}/bin/sonar-scanner"}
                 } 
